@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate email</title>
+</head>
+Open your console log
+
+
+<body>
+
+    <script>
+        const isValidEmail = (str) => {
+            const regularExpress = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+            return regularExpress.test(str)
+        }
+        const printResult = (str) => {
+            isValidEmail(str) ? console.log(str + ' is email') : console.log(str + ' isn\'t email');
+        }
+        printResult('a@gmail.com');
+        printResult('b@yahoo.com');
+        printResult('abc@hotmail.com');
+
+        printResult('@gmail.com');
+        printResult('ab@gmail');
+        printResult('@#abc@gmail.com');
+    </script>
+</body>
+
+</html>
